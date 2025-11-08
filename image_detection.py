@@ -3,7 +3,7 @@ from ultralytics import YOLO
 import PIL
 
 def text_detection(file):
-    model = YOLO("yolov11n.pt")
+    model = YOLO("yolov11n_tomato.pt")
     uploaded_image = PIL.Image.open(file)
     res = model.predict(uploaded_image,conf=0.5,save=True)
     box = res[0].boxes.xyxy.tolist()
