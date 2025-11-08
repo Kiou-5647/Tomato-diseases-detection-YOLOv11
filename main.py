@@ -2,7 +2,7 @@ import os
 import sys
 import streamlit as st
 from pathlib import Path
-import image_detection,video_detection,url_detection
+import image_detection,video_detection,webcam_detection
 from streamlit_option_menu import option_menu
 
 
@@ -43,6 +43,6 @@ class MultiApp:
             image_detection.app()
         if app == "VIDEO":
             video_detection.app()
-        if app == "URL LINKS":
-            url_detection.app()
+        if app == "WEBCAM":
+            webcam_detection.app()
     run()
